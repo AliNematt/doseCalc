@@ -19,13 +19,14 @@ mg_per_mL_solution = mg_needed
 g_per_100mL = (mg_per_mL_solution / 1000.0) * 100
 percent_wv = g_per_100mL
 
-percent_wv_adjusted = percent_wv / purity_fraction if purity_fraction > 0 else 0
+
 # Total pure active required
 total_active_g = (mg_per_mL_solution * v_prep_ml) / 1000.0
 
 # Adjust for purity
 purity_fraction = purity_percent / 100.0
 total_material_g = total_active_g / purity_fraction if purity_fraction > 0 else 0
+percent_wv_adjusted = percent_wv / purity_fraction if purity_fraction > 0 else 0
 
 # Output
 st.subheader("📊 Results")
