@@ -31,7 +31,6 @@ percent_wv_adjusted = percent_wv / purity_fraction if purity_fraction > 0 else 0
 # Output
 st.subheader("📊 Results")
 st.write(f"- Each 1 mL dose must contain **{mg_needed:.3f} mg active**.")
-st.write(f"- Required working solution concentration: **{percent_wv:.4f} % w/v**")
 st.write(f"- Required working solution concentration (accounting for {purity_percent:.1f}% purity): "
          f"**{percent_wv_adjusted:.4f} % w/v**")
 st.write(f"- Pure active required: **{total_active_g:.3f} g**")
